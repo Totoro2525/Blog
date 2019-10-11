@@ -4,6 +4,7 @@ import com.totoro.NotFoundException;
 import com.totoro.dao.BlogRepository;
 import com.totoro.po.Blog;
 import com.totoro.po.Type;
+import com.totoro.util.MarkdownUtils;
 import com.totoro.util.MyBeanUtils;
 import com.totoro.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -36,6 +37,18 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findOne(id);
     }
 
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.findOne(id);
+        if (blog == null) {
+            throw new NotFoundException("该博客不存在");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
+    }
 
     @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
