@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/interceptor" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/BlogService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/BlogServiceImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/CommentService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/CommentServiceImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/TagService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/TagServiceImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/TypeService.java" charset="GBK" />
@@ -14,6 +16,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/service/UserServiceImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/util" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/vo" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/web/CommentController.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/web/admin/BlogController.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/web/admin/LoginController.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/totoro/web/admin/TagController.java" charset="GBK" />
