@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>关于我</title>
@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--导航-->
-    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <nav th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h2 class="ui teal header item"><i class="cn flag"></i>陳大C'Blog</h2>
@@ -32,7 +32,7 @@
     </nav>
 
     <!--中间内容-->
-    <div class="m-container m-padded-tb-big">
+    <div  class="m-container m-padded-tb-big animated fadeIn">
        <div class="ui container">
            <div class="ui stackable grid">
                <div class="eleven wide column">
@@ -62,15 +62,16 @@
                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Cs</div>
                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Js</div>
                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Sping</div>
+                       <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
                    </div>
                    <div class="ui bottom center aligned attached segment">
                        <a href="https://github.com/Totoro2525" target="_blank" class="ui github circular icon button"><i class="teal github icon"></i></a>
-                       <a class="ui wechat circular icon button"><i class="teal weixin icon"></i></a>
+                       <a class="ui wechat circular icon button" style="z-index: 1 !important;"><i class="teal weixin icon"></i></a>
                        <a class="ui qq circular icon button" data-content="请添加QQ：714529684"><i class="teal qq icon"></i></a>
                        <a href="mailto:714529684@qq.com" target="_blank" class="email ui mail circular icon button" data-content="点击发送Email给我"><i class="teal mail icon"></i></a>
                    </div>
                    <div class="ui wechat-qr flowing popup transition hidden">
-                       <img src="../static/images/qrcode.jpg" alt="" class="ui rounded image" style="width: 120px">
+                       <img src="../static/images/qrcode.jpg" th:src="@{/images/qrcode.jpg}" alt="图片加载失败" class="ui rounded image" style="width: 120px">
                    </div>
                </div>
            </div>
@@ -80,7 +81,7 @@
     <br>
 
     <!--底部footer-->
-    <footer class="ui inverted vertical segment m-padded-tb-massive">
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
         <div class="ui center aligned container">
             <div class="ui inverted divided stackable grid">
                 <div class="three wide column">
@@ -115,11 +116,10 @@
             <p class="m-text-thin m-text-spaced m-opacity-tiny m-teal">Copyright © 2016 - 2019 Totoro Designed by Totoro</p>
         </div>
     </footer>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-<script>
-    $('#newblog-container').load(/*/footer/newblog*/"/footer/newblog");
-</script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');

@@ -41,6 +41,7 @@ public class IndexController {
         return "index";
     }
 
+
     @PostMapping("/search")
     public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                          @RequestParam String query, Model model) {
@@ -53,6 +54,12 @@ public class IndexController {
     public String blog(@PathVariable Long id,Model model) {
         model.addAttribute("blog", blogService.getAndConvert(id));
         return "blog";
+    }
+
+    @GetMapping("/footer/newblog")
+    public String newblogs(Model model) {
+        model.addAttribute("newblogs", blogService.listRecommendBlogTop(3));
+        return "_fragments :: newblogList";
     }
 
 }

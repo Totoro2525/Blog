@@ -21,9 +21,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * Created by limi on 2017/10/15.
- */
 @Controller
 @RequestMapping("/admin")
 public class BlogController {
@@ -93,9 +90,9 @@ public class BlogController {
         }
 
         if (b == null ) {
-            attributes.addFlashAttribute("message", "操作失败");
+            attributes.addFlashAttribute("message", "鎿嶄綔澶辫触");
         } else {
-            attributes.addFlashAttribute("message", "操作成功");
+            attributes.addFlashAttribute("message", "鎿嶄綔鎴愬姛");
         }
         return REDIRECT_LIST;
     }
@@ -104,7 +101,7 @@ public class BlogController {
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id,RedirectAttributes attributes) {
         blogService.deleteBlog(id);
-        attributes.addFlashAttribute("message", "删除成功");
+        attributes.addFlashAttribute("message", "鍒犻櫎鎴愬姛");
         return REDIRECT_LIST;
     }
 
