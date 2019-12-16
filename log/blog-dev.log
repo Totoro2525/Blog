@@ -1,862 +1,259 @@
-2019-10-31 08:35:55.554  INFO 3540 --- [restartedMain] com.totoro.BlogApplication               : Starting BlogApplication on DESKTOP-OVIA4ED with PID 3540 (C:\Users\Totoro\IdeaProjects\blog\target\classes started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
-2019-10-31 08:35:55.595 DEBUG 3540 --- [restartedMain] com.totoro.BlogApplication               : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2019-10-31 08:35:55.595  INFO 3540 --- [restartedMain] com.totoro.BlogApplication               : The following profiles are active: dev
-2019-10-31 08:35:56.361  INFO 3540 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1dfbe9a0: startup date [Thu Oct 31 08:35:56 CST 2019]; root of context hierarchy
-2019-10-31 08:36:01.647  INFO 3540 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
-2019-10-31 08:36:01.667  INFO 3540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-31 08:36:01.669  INFO 3540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2019-10-31 08:36:02.030  INFO 3540 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-31 08:36:02.031  INFO 3540 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5670 ms
-2019-10-31 08:36:02.567  INFO 3540 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2019-10-31 08:36:02.579  INFO 3540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-10-31 08:36:02.581  INFO 3540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-10-31 08:36:02.581  INFO 3540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-10-31 08:36:02.582  INFO 3540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-10-31 08:36:03.743  INFO 3540 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:36:03.767  INFO 3540 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-12-15 19:44:30.508  INFO 8376 --- [restartedMain] com.totoro.BlogApplication               : Starting BlogApplication on DESKTOP-OVIA4ED with PID 8376 (C:\Users\Totoro\IdeaProjects\blog\target\classes started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
+2019-12-15 19:44:30.523 DEBUG 8376 --- [restartedMain] com.totoro.BlogApplication               : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2019-12-15 19:44:30.523  INFO 8376 --- [restartedMain] com.totoro.BlogApplication               : The following profiles are active: dev
+2019-12-15 19:44:31.188  INFO 8376 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8504d68: startup date [Sun Dec 15 19:44:31 CST 2019]; root of context hierarchy
+2019-12-15 19:44:34.316  INFO 8376 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 19:44:34.330  INFO 8376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 19:44:34.331  INFO 8376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-12-15 19:44:34.498  INFO 8376 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 19:44:34.499  INFO 8376 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3311 ms
+2019-12-15 19:44:34.885  INFO 8376 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-12-15 19:44:34.893  INFO 8376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-15 19:44:34.894  INFO 8376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-15 19:44:34.894  INFO 8376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-15 19:44:34.895  INFO 8376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-15 19:44:36.118  INFO 8376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-15 19:44:36.137  INFO 8376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-10-31 08:36:04.178  INFO 3540 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2019-10-31 08:36:04.182  INFO 3540 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-31 08:36:04.184  INFO 3540 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2019-10-31 08:36:04.279  INFO 3540 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-10-31 08:36:05.218  INFO 3540 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-31 08:36:06.269  INFO 3540 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2019-10-31 08:36:07.591  INFO 3540 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:36:08.284  INFO 3540 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-31 08:36:09.978  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1dfbe9a0: startup date [Thu Oct 31 08:35:56 CST 2019]; root of context hierarchy
-2019-10-31 08:36:10.122  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
-2019-10-31 08:36:10.133  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.134  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:36:10.134  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
-2019-10-31 08:36:10.135  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2019-10-31 08:36:10.135  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:36:10.136  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:36:10.140  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.142  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2019-10-31 08:36:10.142  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
-2019-10-31 08:36:10.146  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.147  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
-2019-10-31 08:36:10.150  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:36:10.151  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.151  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:36:10.156  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.165  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.166  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:36:10.167  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
-2019-10-31 08:36:10.167  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.167  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:36:10.168  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:36:10.177  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
-2019-10-31 08:36:10.179  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:36:10.180  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
-2019-10-31 08:36:10.182  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:36:10.184  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2019-10-31 08:36:10.185  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:36:10.185  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
-2019-10-31 08:36:10.225  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:36:10.235  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:36:10.247  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-10-31 08:36:10.249  INFO 3540 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-10-31 08:36:10.514  INFO 3540 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:36:10.515  INFO 3540 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:36:10.554  INFO 3540 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2019-10-31 08:36:10.603  INFO 3540 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:36:12.537  INFO 3540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-10-31 08:36:12.613  INFO 3540 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-10-31 08:36:12.670 ERROR 3540 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-80"]
-
-java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-
-2019-10-31 08:36:12.673 ERROR 3540 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-80]]
-
-org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-80]]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	... 18 common frames omitted
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	... 19 common frames omitted
-
-2019-10-31 08:36:12.686  INFO 3540 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-10-31 08:36:12.716  INFO 3540 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2019-10-31 08:36:12.727 ERROR 3540 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 80 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 80, or configure this application to listen on another port.
-
-2019-10-31 08:36:12.729  INFO 3540 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1dfbe9a0: startup date [Thu Oct 31 08:35:56 CST 2019]; root of context hierarchy
-2019-10-31 08:36:12.732  INFO 3540 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-10-31 08:36:12.734  INFO 3540 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:38:26.633  INFO 9532 --- [restartedMain] com.totoro.BlogApplication               : Starting BlogApplication on DESKTOP-OVIA4ED with PID 9532 (C:\Users\Totoro\IdeaProjects\blog\target\classes started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
-2019-10-31 08:38:26.635 DEBUG 9532 --- [restartedMain] com.totoro.BlogApplication               : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2019-10-31 08:38:26.636  INFO 9532 --- [restartedMain] com.totoro.BlogApplication               : The following profiles are active: dev
-2019-10-31 08:38:27.060  INFO 9532 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1c32cee: startup date [Thu Oct 31 08:38:27 CST 2019]; root of context hierarchy
-2019-10-31 08:38:31.364  INFO 9532 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
-2019-10-31 08:38:31.380  INFO 9532 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-31 08:38:31.383  INFO 9532 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2019-10-31 08:38:31.647  INFO 9532 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-31 08:38:31.649  INFO 9532 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4589 ms
-2019-10-31 08:38:32.065  INFO 9532 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2019-10-31 08:38:32.074  INFO 9532 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-10-31 08:38:32.074  INFO 9532 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-10-31 08:38:32.075  INFO 9532 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-10-31 08:38:32.076  INFO 9532 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-10-31 08:38:33.074  INFO 9532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:38:33.095  INFO 9532 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-12-15 19:44:36.437  INFO 8376 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-12-15 19:44:36.437  INFO 8376 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-15 19:44:36.437  INFO 8376 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-12-15 19:44:36.528  INFO 8376 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-15 19:44:37.086  INFO 8376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-15 19:44:37.800  INFO 8376 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-12-15 19:44:38.932  INFO 8376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-15 19:44:39.473  INFO 8376 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-15 19:44:40.882  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8504d68: startup date [Sun Dec 15 19:44:31 CST 2019]; root of context hierarchy
+2019-12-15 19:44:40.985  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
+2019-12-15 19:44:40.992  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:40.993  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
+2019-12-15 19:44:40.993  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
+2019-12-15 19:44:40.994  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2019-12-15 19:44:40.994  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
+2019-12-15 19:44:40.995  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 19:44:40.996  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:40.998  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2019-12-15 19:44:40.998  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
+2019-12-15 19:44:41.001  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:41.001  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 19:44:41.002  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
+2019-12-15 19:44:41.002  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:41.002  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 19:44:41.003  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:41.005  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:41.005  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 19:44:41.005  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
+2019-12-15 19:44:41.006  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:41.006  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 19:44:41.008  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 19:44:41.011  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2019-12-15 19:44:41.012  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 19:44:41.013  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
+2019-12-15 19:44:41.014  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 19:44:41.014  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2019-12-15 19:44:41.015  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 19:44:41.015  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
+2019-12-15 19:44:41.017  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2019-12-15 19:44:41.020  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2019-12-15 19:44:41.023  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-15 19:44:41.025  INFO 8376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-15 19:44:41.148  INFO 8376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 19:44:41.148  INFO 8376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 19:44:41.176  INFO 8376 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2019-12-15 19:44:41.235  INFO 8376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 19:44:43.773  INFO 8376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-15 19:44:43.898  INFO 8376 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-12-15 19:44:43.991  INFO 8376 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-12-15 19:44:44.007  INFO 8376 --- [restartedMain] com.totoro.BlogApplication               : Started BlogApplication in 14.699 seconds (JVM running for 18.689)
+2019-12-15 19:46:08.371  INFO 8376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-12-15 19:46:08.372  INFO 8376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-12-15 19:46:08.426  INFO 8376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 54 ms
+2019-12-15 19:46:08.479  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-12-15 19:46:08.618  WARN 8376 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2019-12-15 19:46:08.639  WARN 8376 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2019-12-15 19:46:08.652  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Result : index
+2019-12-15 19:46:10.119  INFO 8376 --- [http-nio-8080-exec-5] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 19:46:10.127  INFO 8376 --- [http-nio-8080-exec-5] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 20:20:35.176  INFO 8376 --- [http-nio-8080-exec-9] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.totoro.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 20:20:35.244  INFO 8376 --- [http-nio-8080-exec-9] com.totoro.aspect.LogAspect              : Result : types
+2019-12-15 20:20:35.984  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 20:20:35.992  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 20:22:08.234  INFO 8376 --- [http-nio-8080-exec-9] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.totoro.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 20:22:08.285  INFO 8376 --- [http-nio-8080-exec-9] com.totoro.aspect.LogAspect              : Result : tags
+2019-12-15 20:23:04.181  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.totoro.web.ArchiveShowController.archives', args=[{}]}
+2019-12-15 20:23:04.205  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Result : archives
+2019-12-15 20:23:04.882  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 20:23:04.886  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 20:23:51.417  INFO 8376 --- [http-nio-8080-exec-5] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.totoro.web.AboutShowController.about', args=[]}
+2019-12-15 20:23:51.424  INFO 8376 --- [http-nio-8080-exec-5] com.totoro.aspect.LogAspect              : Result : about
+2019-12-15 20:23:52.070  INFO 8376 --- [http-nio-8080-exec-3] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 20:23:52.075  INFO 8376 --- [http-nio-8080-exec-3] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:04:53.799  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.totoro.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 23:04:53.809  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Result : types
+2019-12-15 23:04:54.578  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:04:54.584  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:04:56.744  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:04:56.749  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:04:59.159  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.totoro.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 23:04:59.184  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Result : tags
+2019-12-15 23:05:02.427  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:05:02.433  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:05:03.737  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.totoro.web.ArchiveShowController.archives', args=[{}]}
+2019-12-15 23:05:03.780  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Result : archives
+2019-12-15 23:05:04.521  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:05:04.530  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:05:07.598  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.totoro.web.AboutShowController.about', args=[]}
+2019-12-15 23:05:07.599  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Result : about
+2019-12-15 23:05:08.072  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:05:08.079  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:17:13.446  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-12-15 23:17:13.471  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Result : index
+2019-12-15 23:17:14.217  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:17:14.223  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:17:18.601  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.totoro.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 23:17:18.626  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Result : types
+2019-12-15 23:17:19.298  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:17:19.307  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:17:56.039  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:17:56.045  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:18:15.167  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:18:15.175  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:18:36.184  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-12-15 23:18:36.202  INFO 8376 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Result : index
+2019-12-15 23:18:36.835  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:18:36.839  INFO 8376 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:18:38.871  INFO 8376 --- [http-nio-8080-exec-5] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.totoro.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 23:18:38.885  INFO 8376 --- [http-nio-8080-exec-5] com.totoro.aspect.LogAspect              : Result : types
+2019-12-15 23:18:39.519  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:18:39.524  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:18:48.799  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.totoro.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 23:18:48.846  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Result : tags
+2019-12-15 23:18:50.720  INFO 8376 --- [http-nio-8080-exec-3] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.totoro.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 23:18:50.736  INFO 8376 --- [http-nio-8080-exec-3] com.totoro.aspect.LogAspect              : Result : types
+2019-12-15 23:18:51.353  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:18:51.359  INFO 8376 --- [http-nio-8080-exec-4] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:18:52.964  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/types/2', ip='127.0.0.1', classMethod='com.totoro.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 2, {}]}
+2019-12-15 23:18:52.973  INFO 8376 --- [http-nio-8080-exec-7] com.totoro.aspect.LogAspect              : Result : types
+2019-12-15 23:18:53.634  INFO 8376 --- [http-nio-8080-exec-9] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:18:53.639  INFO 8376 --- [http-nio-8080-exec-9] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:18:54.459  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.totoro.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2019-12-15 23:18:54.483  INFO 8376 --- [http-nio-8080-exec-10] com.totoro.aspect.LogAspect              : Result : tags
+2019-12-15 23:19:00.340  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.totoro.web.ArchiveShowController.archives', args=[{}]}
+2019-12-15 23:19:00.363  INFO 8376 --- [http-nio-8080-exec-8] com.totoro.aspect.LogAspect              : Result : archives
+2019-12-15 23:19:00.784  INFO 8376 --- [http-nio-8080-exec-2] com.totoro.aspect.LogAspect              : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
+2019-12-15 23:19:00.789  INFO 8376 --- [http-nio-8080-exec-2] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:20:40.589  INFO 1384 --- [main] com.totoro.BlogApplicationTests          : Starting BlogApplicationTests on DESKTOP-OVIA4ED with PID 1384 (started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
+2019-12-15 23:20:40.591 DEBUG 1384 --- [main] com.totoro.BlogApplicationTests          : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2019-12-15 23:20:40.591  INFO 1384 --- [main] com.totoro.BlogApplicationTests          : The following profiles are active: dev
+2019-12-15 23:20:41.121  INFO 1384 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@471a9022: startup date [Sun Dec 15 23:20:41 CST 2019]; root of context hierarchy
+2019-12-15 23:20:46.361  INFO 1384 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-15 23:20:46.404  INFO 1384 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-10-31 08:38:33.461  INFO 9532 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2019-10-31 08:38:33.466  INFO 9532 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-31 08:38:33.471  INFO 9532 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2019-10-31 08:38:33.576  INFO 9532 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-10-31 08:38:34.315  INFO 9532 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-31 08:38:35.204  INFO 9532 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2019-10-31 08:38:36.439  INFO 9532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:38:37.055  INFO 9532 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-31 08:38:38.589  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1c32cee: startup date [Thu Oct 31 08:38:27 CST 2019]; root of context hierarchy
-2019-10-31 08:38:38.719  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
-2019-10-31 08:38:38.726  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.727  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:38:38.728  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
-2019-10-31 08:38:38.729  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2019-10-31 08:38:38.730  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:38:38.730  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:38:38.734  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
-2019-10-31 08:38:38.735  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.735  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2019-10-31 08:38:38.737  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.738  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
-2019-10-31 08:38:38.738  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:38:38.739  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.739  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:38:38.740  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.743  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.744  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:38:38.744  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
-2019-10-31 08:38:38.744  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.744  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:38:38.745  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:38:38.751  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
-2019-10-31 08:38:38.753  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:38:38.753  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
-2019-10-31 08:38:38.754  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:38:38.755  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2019-10-31 08:38:38.755  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:38:38.755  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
-2019-10-31 08:38:38.756  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:38:38.757  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:38:38.760  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-10-31 08:38:38.762  INFO 9532 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-10-31 08:38:38.935  INFO 9532 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:38:38.935  INFO 9532 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:38:38.972  INFO 9532 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2019-10-31 08:38:39.020  INFO 9532 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:38:40.808  INFO 9532 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-10-31 08:38:40.876  INFO 9532 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-10-31 08:38:40.925 ERROR 9532 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-80"]
-
-java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-
-2019-10-31 08:38:40.926 ERROR 9532 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-80]]
-
-org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-80]]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	... 18 common frames omitted
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	... 19 common frames omitted
-
-2019-10-31 08:38:40.944  INFO 9532 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-10-31 08:38:40.967  INFO 9532 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2019-10-31 08:38:40.976 ERROR 9532 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 80 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 80, or configure this application to listen on another port.
-
-2019-10-31 08:38:40.979  INFO 9532 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1c32cee: startup date [Thu Oct 31 08:38:27 CST 2019]; root of context hierarchy
-2019-10-31 08:38:40.984  INFO 9532 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-10-31 08:38:40.988  INFO 9532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:43:14.197  INFO 9928 --- [restartedMain] com.totoro.BlogApplication               : Starting BlogApplication on DESKTOP-OVIA4ED with PID 9928 (C:\Users\Totoro\IdeaProjects\blog\target\classes started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
-2019-10-31 08:43:14.199 DEBUG 9928 --- [restartedMain] com.totoro.BlogApplication               : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2019-10-31 08:43:14.199  INFO 9928 --- [restartedMain] com.totoro.BlogApplication               : The following profiles are active: dev
-2019-10-31 08:43:14.695  INFO 9928 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60ad341a: startup date [Thu Oct 31 08:43:14 CST 2019]; root of context hierarchy
-2019-10-31 08:43:18.176  INFO 9928 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
-2019-10-31 08:43:18.192  INFO 9928 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-31 08:43:18.194  INFO 9928 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2019-10-31 08:43:18.416  INFO 9928 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-31 08:43:18.417  INFO 9928 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3722 ms
-2019-10-31 08:43:18.737  INFO 9928 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2019-10-31 08:43:18.743  INFO 9928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-10-31 08:43:18.744  INFO 9928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-10-31 08:43:18.745  INFO 9928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-10-31 08:43:18.745  INFO 9928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-10-31 08:43:19.490  INFO 9928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:43:19.508  INFO 9928 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-12-15 23:20:46.740  INFO 1384 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-12-15 23:20:46.744  INFO 1384 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-15 23:20:46.748  INFO 1384 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-12-15 23:20:46.831  INFO 1384 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-15 23:20:47.075  INFO 1384 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-15 23:20:48.565  INFO 1384 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-12-15 23:20:49.472  INFO 1384 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-15 23:20:50.173  INFO 1384 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-15 23:20:52.372  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@471a9022: startup date [Sun Dec 15 23:20:41 CST 2019]; root of context hierarchy
+2019-12-15 23:20:52.575  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.591  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:20:52.607  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-15 23:20:52.622  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-15 23:20:52.700  INFO 1384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 23:20:52.700  INFO 1384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 23:20:52.732  INFO 1384 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2019-12-15 23:20:52.816  INFO 1384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 23:20:54.116  INFO 1384 --- [main] com.totoro.BlogApplicationTests          : Started BlogApplicationTests in 14.7 seconds (JVM running for 16.473)
+2019-12-15 23:20:54.237  INFO 1384 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@471a9022: startup date [Sun Dec 15 23:20:41 CST 2019]; root of context hierarchy
+2019-12-15 23:20:54.245  INFO 1384 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-15 23:56:54.602  INFO 4812 --- [main] com.totoro.BlogApplicationTests          : Starting BlogApplicationTests on DESKTOP-OVIA4ED with PID 4812 (started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
+2019-12-15 23:56:54.602 DEBUG 4812 --- [main] com.totoro.BlogApplicationTests          : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2019-12-15 23:56:54.602  INFO 4812 --- [main] com.totoro.BlogApplicationTests          : The following profiles are active: dev
+2019-12-15 23:56:54.977  INFO 4812 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@471a9022: startup date [Sun Dec 15 23:56:54 CST 2019]; root of context hierarchy
+2019-12-15 23:56:59.445  INFO 4812 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-15 23:56:59.476  INFO 4812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-10-31 08:43:19.750  INFO 9928 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2019-10-31 08:43:19.752  INFO 9928 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-31 08:43:19.754  INFO 9928 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2019-10-31 08:43:19.834  INFO 9928 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-10-31 08:43:20.330  INFO 9928 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-31 08:43:20.972  INFO 9928 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2019-10-31 08:43:21.952  INFO 9928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:43:22.349  INFO 9928 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-31 08:43:23.404  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60ad341a: startup date [Thu Oct 31 08:43:14 CST 2019]; root of context hierarchy
-2019-10-31 08:43:23.498  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
-2019-10-31 08:43:23.504  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.504  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:43:23.505  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
-2019-10-31 08:43:23.505  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2019-10-31 08:43:23.506  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:23.506  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:43:23.508  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
-2019-10-31 08:43:23.509  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.509  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2019-10-31 08:43:23.511  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.511  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:43:23.511  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
-2019-10-31 08:43:23.512  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.512  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:23.513  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.515  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.516  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:43:23.516  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
-2019-10-31 08:43:23.516  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.517  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:23.517  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:23.519  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
-2019-10-31 08:43:23.521  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:23.521  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
-2019-10-31 08:43:23.522  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:43:23.522  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2019-10-31 08:43:23.523  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:23.523  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
-2019-10-31 08:43:23.524  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:23.525  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:23.526  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-10-31 08:43:23.527  INFO 9928 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-10-31 08:43:23.586  INFO 9928 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:43:23.586  INFO 9928 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:43:23.610  INFO 9928 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2019-10-31 08:43:23.666  INFO 9928 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:43:25.114  INFO 9928 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-10-31 08:43:25.167  INFO 9928 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-10-31 08:43:25.208 ERROR 9928 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-80"]
-
-java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-
-2019-10-31 08:43:25.209 ERROR 9928 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-80]]
-
-org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-80]]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	... 18 common frames omitted
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	... 19 common frames omitted
-
-2019-10-31 08:43:25.223  INFO 9928 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-10-31 08:43:25.239  INFO 9928 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2019-10-31 08:43:25.246 ERROR 9928 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 80 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 80, or configure this application to listen on another port.
-
-2019-10-31 08:43:25.248  INFO 9928 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60ad341a: startup date [Thu Oct 31 08:43:14 CST 2019]; root of context hierarchy
-2019-10-31 08:43:25.250  INFO 9928 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-10-31 08:43:25.252  INFO 9928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:43:50.141  INFO 3556 --- [restartedMain] com.totoro.BlogApplication               : Starting BlogApplication on DESKTOP-OVIA4ED with PID 3556 (C:\Users\Totoro\IdeaProjects\blog\target\classes started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
-2019-10-31 08:43:50.143 DEBUG 3556 --- [restartedMain] com.totoro.BlogApplication               : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2019-10-31 08:43:50.143  INFO 3556 --- [restartedMain] com.totoro.BlogApplication               : The following profiles are active: dev
-2019-10-31 08:43:50.474  INFO 3556 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ebe693c: startup date [Thu Oct 31 08:43:50 CST 2019]; root of context hierarchy
-2019-10-31 08:43:53.563  INFO 3556 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
-2019-10-31 08:43:53.575  INFO 3556 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-31 08:43:53.576  INFO 3556 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2019-10-31 08:43:53.763  INFO 3556 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-31 08:43:53.764  INFO 3556 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3290 ms
-2019-10-31 08:43:54.071  INFO 3556 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2019-10-31 08:43:54.078  INFO 3556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-10-31 08:43:54.078  INFO 3556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-10-31 08:43:54.079  INFO 3556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-10-31 08:43:54.079  INFO 3556 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-10-31 08:43:54.827  INFO 3556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:43:54.841  INFO 3556 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-10-31 08:43:55.078  INFO 3556 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2019-10-31 08:43:55.081  INFO 3556 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-31 08:43:55.082  INFO 3556 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2019-10-31 08:43:55.140  INFO 3556 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-10-31 08:43:55.644  INFO 3556 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-31 08:43:56.195  INFO 3556 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2019-10-31 08:43:57.143  INFO 3556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:43:57.536  INFO 3556 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-31 08:43:58.587  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ebe693c: startup date [Thu Oct 31 08:43:50 CST 2019]; root of context hierarchy
-2019-10-31 08:43:58.698  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
-2019-10-31 08:43:58.707  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.708  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:43:58.709  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
-2019-10-31 08:43:58.710  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2019-10-31 08:43:58.710  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:43:58.711  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:58.714  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.715  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
-2019-10-31 08:43:58.715  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2019-10-31 08:43:58.718  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.719  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
-2019-10-31 08:43:58.719  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:43:58.720  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.721  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.722  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:58.725  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.726  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:43:58.726  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
-2019-10-31 08:43:58.727  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.728  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:43:58.728  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:58.732  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
-2019-10-31 08:43:58.734  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:58.735  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
-2019-10-31 08:43:58.737  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:43:58.738  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2019-10-31 08:43:58.738  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:58.738  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
-2019-10-31 08:43:58.739  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:58.741  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:43:58.744  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-10-31 08:43:58.745  INFO 3556 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-10-31 08:43:58.837  INFO 3556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:43:58.838  INFO 3556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:43:58.883  INFO 3556 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2019-10-31 08:43:58.928  INFO 3556 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:44:00.342  INFO 3556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-10-31 08:44:00.400  INFO 3556 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-10-31 08:44:00.437 ERROR 3556 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-80"]
-
-java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-
-2019-10-31 08:44:00.438 ERROR 3556 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-80]]
-
-org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-80]]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	... 18 common frames omitted
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	... 19 common frames omitted
-
-2019-10-31 08:44:00.450  INFO 3556 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-10-31 08:44:00.467  INFO 3556 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2019-10-31 08:44:00.474 ERROR 3556 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 80 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 80, or configure this application to listen on another port.
-
-2019-10-31 08:44:00.475  INFO 3556 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ebe693c: startup date [Thu Oct 31 08:43:50 CST 2019]; root of context hierarchy
-2019-10-31 08:44:00.477  INFO 3556 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-10-31 08:44:00.480  INFO 3556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:46:08.287  INFO 6896 --- [restartedMain] com.totoro.BlogApplication               : Starting BlogApplication on DESKTOP-OVIA4ED with PID 6896 (C:\Users\Totoro\IdeaProjects\blog\target\classes started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
-2019-10-31 08:46:08.289 DEBUG 6896 --- [restartedMain] com.totoro.BlogApplication               : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2019-10-31 08:46:08.289  INFO 6896 --- [restartedMain] com.totoro.BlogApplication               : The following profiles are active: dev
-2019-10-31 08:46:08.623  INFO 6896 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@604c6aa6: startup date [Thu Oct 31 08:46:08 CST 2019]; root of context hierarchy
-2019-10-31 08:46:11.943  INFO 6896 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
-2019-10-31 08:46:11.955  INFO 6896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-31 08:46:11.956  INFO 6896 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2019-10-31 08:46:12.160  INFO 6896 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-31 08:46:12.161  INFO 6896 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3538 ms
-2019-10-31 08:46:12.469  INFO 6896 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2019-10-31 08:46:12.475  INFO 6896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-10-31 08:46:12.475  INFO 6896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-10-31 08:46:12.476  INFO 6896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-10-31 08:46:12.476  INFO 6896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-10-31 08:46:13.243  INFO 6896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:46:13.264  INFO 6896 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-10-31 08:46:13.502  INFO 6896 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2019-10-31 08:46:13.504  INFO 6896 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-31 08:46:13.506  INFO 6896 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2019-10-31 08:46:13.565  INFO 6896 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-10-31 08:46:14.102  INFO 6896 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-31 08:46:14.706  INFO 6896 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2019-10-31 08:46:15.658  INFO 6896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:46:16.058  INFO 6896 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-31 08:46:17.186  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@604c6aa6: startup date [Thu Oct 31 08:46:08 CST 2019]; root of context hierarchy
-2019-10-31 08:46:17.287  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
-2019-10-31 08:46:17.294  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.295  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:46:17.296  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
-2019-10-31 08:46:17.297  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2019-10-31 08:46:17.297  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:46:17.297  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:46:17.299  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
-2019-10-31 08:46:17.300  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2019-10-31 08:46:17.300  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.302  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.303  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
-2019-10-31 08:46:17.303  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:46:17.303  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.304  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:46:17.305  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.308  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.309  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:46:17.309  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
-2019-10-31 08:46:17.310  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.310  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:46:17.311  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:46:17.314  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
-2019-10-31 08:46:17.316  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:46:17.317  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
-2019-10-31 08:46:17.318  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:46:17.319  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2019-10-31 08:46:17.319  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:46:17.320  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
-2019-10-31 08:46:17.320  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:46:17.321  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:46:17.324  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-10-31 08:46:17.325  INFO 6896 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-10-31 08:46:17.398  INFO 6896 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:46:17.398  INFO 6896 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:46:17.434  INFO 6896 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2019-10-31 08:46:17.487  INFO 6896 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:46:19.335  INFO 6896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-10-31 08:46:19.388  INFO 6896 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-10-31 08:46:19.425 ERROR 6896 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-80"]
-
-java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-
-2019-10-31 08:46:19.426 ERROR 6896 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-80]]
-
-org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-80]]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
-	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.totoro.BlogApplication.main(BlogApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
-	... 18 common frames omitted
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
-	... 19 common frames omitted
-
-2019-10-31 08:46:19.438  INFO 6896 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-10-31 08:46:19.454  INFO 6896 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2019-10-31 08:46:19.461 ERROR 6896 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 80 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 80, or configure this application to listen on another port.
-
-2019-10-31 08:46:19.463  INFO 6896 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@604c6aa6: startup date [Thu Oct 31 08:46:08 CST 2019]; root of context hierarchy
-2019-10-31 08:46:19.465  INFO 6896 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-10-31 08:46:19.466  INFO 6896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:50:29.420  INFO 11180 --- [restartedMain] com.totoro.BlogApplication               : Starting BlogApplication on DESKTOP-OVIA4ED with PID 11180 (C:\Users\Totoro\IdeaProjects\blog\target\classes started by Totoro in C:\Users\Totoro\IdeaProjects\blog)
-2019-10-31 08:50:29.422 DEBUG 11180 --- [restartedMain] com.totoro.BlogApplication               : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2019-10-31 08:50:29.422  INFO 11180 --- [restartedMain] com.totoro.BlogApplication               : The following profiles are active: dev
-2019-10-31 08:50:29.966  INFO 11180 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73609636: startup date [Thu Oct 31 08:50:29 CST 2019]; root of context hierarchy
-2019-10-31 08:50:33.689  INFO 11180 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2019-10-31 08:50:33.706  INFO 11180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-31 08:50:33.707  INFO 11180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2019-10-31 08:50:33.904  INFO 11180 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-31 08:50:33.906  INFO 11180 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3940 ms
-2019-10-31 08:50:34.263  INFO 11180 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2019-10-31 08:50:34.270  INFO 11180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-10-31 08:50:34.270  INFO 11180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-10-31 08:50:34.271  INFO 11180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-10-31 08:50:34.271  INFO 11180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-10-31 08:50:35.036  INFO 11180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:50:35.050  INFO 11180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-10-31 08:50:35.281  INFO 11180 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2019-10-31 08:50:35.284  INFO 11180 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-31 08:50:35.285  INFO 11180 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2019-10-31 08:50:35.342  INFO 11180 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-10-31 08:50:35.835  INFO 11180 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-31 08:50:36.451  INFO 11180 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2019-10-31 08:50:37.395  INFO 11180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-31 08:50:37.827  INFO 11180 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-31 08:50:38.963  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73609636: startup date [Thu Oct 31 08:50:29 CST 2019]; root of context hierarchy
-2019-10-31 08:50:39.070  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
-2019-10-31 08:50:39.079  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.080  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:50:39.081  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
-2019-10-31 08:50:39.081  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2019-10-31 08:50:39.082  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
-2019-10-31 08:50:39.082  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:50:39.085  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
-2019-10-31 08:50:39.086  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.087  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2019-10-31 08:50:39.089  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.090  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
-2019-10-31 08:50:39.091  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:50:39.091  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.091  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:50:39.093  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.098  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.099  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:50:39.099  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
-2019-10-31 08:50:39.100  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.101  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:50:39.101  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2019-10-31 08:50:39.106  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
-2019-10-31 08:50:39.108  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:50:39.109  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
-2019-10-31 08:50:39.112  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2019-10-31 08:50:39.113  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2019-10-31 08:50:39.113  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:50:39.114  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
-2019-10-31 08:50:39.115  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:50:39.117  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2019-10-31 08:50:39.121  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-10-31 08:50:39.122  INFO 11180 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-10-31 08:50:39.271  INFO 11180 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:50:39.271  INFO 11180 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:50:39.316  INFO 11180 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2019-10-31 08:50:39.359  INFO 11180 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-10-31 08:50:40.851  INFO 11180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-10-31 08:50:40.904  INFO 11180 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-10-31 08:50:40.979  INFO 11180 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2019-10-31 08:50:40.987  INFO 11180 --- [restartedMain] com.totoro.BlogApplication               : Started BlogApplication in 13.237 seconds (JVM running for 15.458)
-2019-10-31 08:50:57.279  INFO 11180 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-10-31 08:50:57.280  INFO 11180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-10-31 08:50:57.349  INFO 11180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 68 ms
-2019-10-31 08:50:57.408  INFO 11180 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.totoro.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2019-10-31 08:50:57.580  WARN 11180 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2019-10-31 08:50:57.596  WARN 11180 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2019-10-31 08:50:57.612  INFO 11180 --- [http-nio-8080-exec-1] com.totoro.aspect.LogAspect              : Result : index
-2019-10-31 08:50:59.598  INFO 11180 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.totoro.web.IndexController.newblogs', args=[{}]}
-2019-10-31 08:50:59.607  INFO 11180 --- [http-nio-8080-exec-6] com.totoro.aspect.LogAspect              : Result : _fragments :: newblogList
+2019-12-15 23:56:59.742  INFO 4812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-12-15 23:56:59.742  INFO 4812 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-15 23:56:59.742  INFO 4812 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-12-15 23:56:59.836  INFO 4812 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-15 23:57:00.054  INFO 4812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-15 23:57:01.382  INFO 4812 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-12-15 23:57:02.272  INFO 4812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-15 23:57:02.929  INFO 4812 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-15 23:57:04.944  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@471a9022: startup date [Sun Dec 15 23:56:54 CST 2019]; root of context hierarchy
+2019-12-15 23:57:05.100  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.totoro.web.AboutShowController.about()
+2019-12-15 23:57:05.100  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.input(org.springframework.ui.Model)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.BlogController.post(com.totoro.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.totoro.vo.BlogQuery,org.springframework.ui.Model)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.LoginController.loginPage()
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.input(org.springframework.ui.Model)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.post(com.totoro.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:57:05.116  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TagController.editPost(com.totoro.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.input(org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.post(com.totoro.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.totoro.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.totoro.web.admin.TypeController.editPost(com.totoro.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.totoro.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.totoro.web.CommentController.post(com.totoro.po.Comment,javax.servlet.http.HttpSession)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.totoro.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.totoro.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.totoro.web.IndexController.newblogs(org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:57:05.131  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.totoro.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2019-12-15 23:57:05.147  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-15 23:57:05.147  INFO 4812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-15 23:57:05.272  INFO 4812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 23:57:05.272  INFO 4812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 23:57:05.303  INFO 4812 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2019-12-15 23:57:05.350  INFO 4812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-15 23:57:06.412  INFO 4812 --- [main] com.totoro.BlogApplicationTests          : Started BlogApplicationTests in 12.684 seconds (JVM running for 14.09)
+2019-12-15 23:57:06.506  INFO 4812 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@471a9022: startup date [Sun Dec 15 23:56:54 CST 2019]; root of context hierarchy
+2019-12-15 23:57:06.521  INFO 4812 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
