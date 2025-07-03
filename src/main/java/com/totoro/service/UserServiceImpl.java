@@ -6,6 +6,8 @@ import com.totoro.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -16,5 +18,11 @@ public class UserServiceImpl implements UserService {
     public User checkUser(String username, String password) {
         User user = userRepository.findByUsernameAndPassword(username, MD5Utils.code(password));
         return user;
+    }
+
+    @Override
+    public User me() {
+        List<User> all = userRepository.findAll();
+        return all.get(0);
     }
 }

@@ -18,6 +18,7 @@ public class User {
     private String email;
     private String avatar;
     private Integer type;
+    private String description;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
@@ -83,6 +84,14 @@ public class User {
 
     public void setType(Integer type) {
         this.type = type;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Date getCreateTime() {
