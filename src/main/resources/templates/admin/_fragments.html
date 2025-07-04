@@ -11,9 +11,9 @@
 <body>
 
 <!--导航-->
-<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+<nav th:fragment="menu(n)" class="ui fixed top inverted menu m-shadow-small" >
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu">
+        <div class="ui inverted secondary menu">
             <h2 class="ui teal header item">管理后台</h2>
             <a href="#" th:href="@{/admin/blogs}" class=" m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="large home icon"></i><span th：text="#{nav.blog}">博客</span></a>
             <a href="#" th:href="@{/admin/types}" class=" m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="large idea icon"></i><span th：text="#{nav.types}">分类</span></a>

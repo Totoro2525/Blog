@@ -1,6 +1,6 @@
-
 body {
     background: url("../images/bg.png");
+    padding-top: 50px; /* 根据fixed menu高度调整 */
 }
 
 .m-padded-mini {
@@ -34,6 +34,7 @@ body {
     padding-bottom: 2em !important;
 }
 .m-padded-tb-big {
+    height: 500px;
     padding-top: 3em !important;
     padding-bottom: 3em !important;
 }
